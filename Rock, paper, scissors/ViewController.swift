@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Wincount.text = "Wins: \(count)"
 
         updateUI(state: .start)
     }
@@ -71,6 +70,7 @@ class ViewController: UIViewController {
             GameState.text = "You win!"
             replaybutton.isHidden = false
             count += 1
+            
 
         }
         if(state == .lose){
@@ -89,6 +89,9 @@ class ViewController: UIViewController {
         let computer = randomSign()
         var state = sign.checkWin(opponent: computer)
         updateUI(state: state)
+        Wincount.text = "Wins: \(count)"
+
+        
     }
     
 }
