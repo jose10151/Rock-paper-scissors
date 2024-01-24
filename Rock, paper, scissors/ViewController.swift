@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     
     func Play(sign: Sign){
         let computer = randomSign()
-        var state = sign.checkWin(opponent: computer)
+        let state = sign.checkWin(opponent: computer)
         updateUI(state: state)
         Wincount.text = "Wins: \(count)"
 
